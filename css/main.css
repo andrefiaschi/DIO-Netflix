@@ -1,0 +1,121 @@
+/* Variáveis das cores e margens padrão*/
+
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+
+    --margemv: 15px; /* Margens sup e inf */
+    --margemh: 50px; /* Margens esq e dir */
+}
+
+/* Reset CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--preto);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white; 
+
+}
+
+/* Container geral */
+
+.container {
+    margin: var(--margemv) var(--margemh);
+}
+
+/* Menu superior */
+
+header .container {
+    display: flex;
+    flex-direction: row; /* padrão mesmo se não setado*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    color: var(--vermelho);
+    font-family: 'arial';
+    font-size: 30px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 20px;
+
+}
+
+/* Ao passar o mouse sobre os links do nav */
+
+header nav a:hover {
+    color: #fff;
+}
+
+/* Conteudo em destaque */
+
+.filme-principal {
+    background: url('../img/capa-house.jpg'), 
+                linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%);
+    font-size: 14px;
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: flex-start;
+
+    padding-bottom: var(--margemh);
+}
+
+.filme-principal .titulo {
+   
+    font-size: 30px;
+}
+
+.filme-principal .descricao {
+    margin: 20px 0px;
+}
+
+.filme-principal .container {
+    width: 60%;
+}
+
+.botao {
+    margin-right: 20px;
+    padding: 10px 20px;
+    border:0px;
+    border-radius: 3px;
+    background-color: rgba(250,250,250,.50);
+}
+
+.botao i {
+    padding-right: 10px;
+    font-size: 12px;
+}
+
+.botao:hover {
+    background-color: rgba(0,0,0,.50);
+    color: white;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+}
+
+.botao:active {
+    background-color: rgba(204, 31, 31, 0.5);
+    color: white;
+    cursor: pointer;
+    transition: 00ms step-end;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
